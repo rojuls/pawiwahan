@@ -23,24 +23,35 @@ body {
   z-index: -1;
 }
 
+/* LOCK BODY PAS COVER MUNCUL */
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
+
 /* SECTION COVER TENGAH */
 .cover {
   height: 100vh;
-  width: 100%;
+  width: 100vw; /* ganti 100% jadi 100vw biar bener2 full */
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; /* biar nempel nutupin semua */
+  position: fixed; 
   top: 0;
   left: 0;
-  z-index: 9999; /* paling atas */
+  z-index: 9999; 
   background: url('img/JAWA-5-BG-UTAMA-1.jpg') no-repeat center center/cover;
-  transition: opacity 1s ease, visibility 1s ease; /* animasi ilang */
+  transition: opacity 1s ease, visibility 1s ease;
+  padding: 20px; /* biar tombol ga mepet */
+  box-sizing: border-box;
 }
 
 .cover.hide {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none; /* biar ga bisa di klik pas ilang */
 }
 
 .teks-kecil {
@@ -94,20 +105,21 @@ body {
 }
 
 .btn-buka {
+  padding: 15px 35px;
   background: #8b4513;
-  color: white;
-  padding: 12px 30px;
+  color: #fff;
+  border: none;
   border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
   margin-top: 20px;
-  display: inline-block;
-  transition: all 0.3s ease;
+  max-width: 90%;
+  transition: all 0.2s ease; /* buat animasi */
 }
 
-.btn-buka:hover {
+.btn-buka:active {
   background: #6b3410;
-  transform: translateY(-2px);
+  transform: scale(0.95); /* pas di tap menciut dikit */
 }
 
 /* SECTION ISI */
@@ -293,5 +305,3 @@ body {
   margin-bottom: 15px;
   line-height: 1.4;
 }
-    body.lock-scroll { overflow: hidden; height: 100vh; }
-    .cover.hide { opacity: 0; visibility: hidden; }
