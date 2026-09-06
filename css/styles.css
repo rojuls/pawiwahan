@@ -14,14 +14,22 @@ body {
 
 /* BACKGROUND BATIK */
  .bg-batik {
-  background: url('img/JAWA-5-BG-UTAMA-1.jpg') no-repeat center top; /* ganti center jadi center top */
-  background-size: cover;
+  background: url('img/JAWA-5-BG-UTAMA-1.jpg') no-repeat center center;
+  background-size: 100% 100%; /* GANTI DARI cover jadi gini */
   background-attachment: scroll;
   position: fixed;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+/* Khusus HP biar ga gepeng */
+@media (max-width: 768px) {
+  .bg-batik {
+    background-size: cover; /* HP tetep cover biar ga ada space kosong */
+    background-position: center top; /* fokus ke atas */
+  }
 }
 
 /* LOCK BODY PAS COVER MUNCUL */
