@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const menit = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const detik = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Cek dulu elemennya ada apa nggak
     if(document.getElementById("hari")) {
       document.getElementById("hari").innerHTML = hari;
       document.getElementById("jam").innerHTML = jam;
@@ -32,12 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
   const btnMusik = document.getElementById('btn-musik');
   let isPlaying = false;
 
-  // Autoplay pas klik "Buka Undangan"
+  // 3. KODE BUKA UNDANGAN + ILANGIN COVER
   const btnBuka = document.querySelector('.btn-buka');
+  const cover = document.querySelector('.cover');
+  
   if(btnBuka) {
     btnBuka.addEventListener('click', (e) => {
       e.preventDefault();
-      document.getElementById('isi').scrollIntoView({ behavior: 'smooth' });
+      
+      // A. Buka lock scroll di body
+      document.body.classList.remove('lock-scroll');
+      
+      // B. Kasih efek fade out ke cover
+      cover.classList.add('hide');
+      
+      // C. Scroll slow motion ke section #isi setelah 0.5 detik
+      setTimeout(() => {
+        document.getElementById('isi').scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+      
+      // D. Play musik
       if(audio) {
         audio.play();
         isPlaying = true;
@@ -46,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Toggle play/pause
+  // 4. Toggle play/pause
   if(btnMusik) {
     btnMusik.addEventListener('click', () => {
       if(isPlaying) {
