@@ -13,10 +13,10 @@ body {
 }
 
 /* BACKGROUND BATIK */
-.bg-batik {
-  background: url('img/JAWA-5-BG-UTAMA-1.jpg') no-repeat center center;
+ .bg-batik {
+   background: url('img/JAWA-5-BG-UTAMA-1.jpg') no-repeat center top;
   background-size: cover;
-  background-attachment: scroll; /* JANGAN fixed di HP */
+  background-attachment: scroll;
   position: fixed;
   top: 0; 
   left: 0;
