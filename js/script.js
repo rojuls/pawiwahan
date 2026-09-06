@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // D. Play musik
       if(audio) {
-        audio.play();
+        audio.play().catch(e => {
+          console.log("Autoplay diblock browser:", e);
+        });
         isPlaying = true;
         btnMusik.innerHTML = '🔊';
       }
-    });
-  }
 
   // 4. Toggle play/pause
   if(btnMusik) {
