@@ -36,3 +36,59 @@ h1 {
   font-size: 48px;
   color: #8b4513;
 }
+
+/* SECTION COVER TENGAH */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.teks-kecil {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #6b4f3a;
+}
+
+.nama {
+  font-family: 'Great Vibes', cursive;
+  font-size: 52px;
+  color: #8b4513;
+  margin: 10px 0;
+}
+
+.tanggal {
+  font-size: 16px;
+  font-weight: 600;
+  color: #5a3e2b;
+}
+
+.btn-buka {
+  background: #8b4513;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.btn-buka:hover {
+  background: #6b3410;
+}
+
+/* SECTION ISI */
+.isi {
+  padding: 40px 20px;
+}
+
+.judul {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #8b4513;
+}
