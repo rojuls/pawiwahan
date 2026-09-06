@@ -12,24 +12,34 @@ body {
   scroll-behavior: smooth;
 }
 
-/* BACKGROUND BATIK */
- .bg-batik {
+/* BACKGROUND BATIK FULL 1 LEMBAR */
+.bg-batik {
   background: url('img/JAWA-5-BG-UTAMA-1.jpg') no-repeat center center;
-  background-size: 100% 100%; /* GANTI DARI cover jadi gini */
+  background-size: 100% 100%; /* PC: full tanpa space */
+  background-color: #2d1a0f; /* warna darurat biar ga putih */
   background-attachment: scroll;
   position: fixed;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  min-height: 100%;
   z-index: -1;
+  will-change: transform; /* biar ga lag di iPhone */
+  -webkit-transform: translateZ(0);
 }
 
-/* Khusus HP biar ga gepeng */
+/* KHUSUS HP BIAR GA GEPENG */
 @media (max-width: 768px) {
   .bg-batik {
-    background-size: cover; /* HP tetep cover biar ga ada space kosong */
+    background-size: cover; /* HP: full layar */
     background-position: center top; /* fokus ke atas */
   }
+}
+
+/* BIAR SECTION TEMBUS KE BG */
+.cover, section, main, footer {
+  background: transparent !important;
 }
 
 /* LOCK BODY PAS COVER MUNCUL */
