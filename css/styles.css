@@ -19,32 +19,38 @@ body {
 
 /* KARTU UTAMA KACA */
 .box-utama {
-  background: rgba(247, 241, 232, 0.92);
-  backdrop-filter: blur(4px);
+  background: rgba(247, 241, 232, 0.65); /* lebih tembus */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   max-width: 500px;
-  margin: 40px auto;
-  padding: 30px 20px;
-  border-radius: 16px;
+  margin: 0 auto 40px auto; /* ATAS 0px */
+  padding: 20px 20px 30px 20px; /* padding atas dikecilin */
+  border-radius: 0 0 24px 24px; /* atas lurus */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: none;
   position: relative;
   z-index: 1;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
   text-align: center;
 }
 
-h1 {
+h1.nama { /* tambahin .nama biar khusus buat nama doang */
   font-family: 'Great Vibes', cursive;
-  font-size: 48px;
+  font-size: 42px; /* dari 48px jadi 42px */
   color: #8b4513;
+  margin: 8px 0; /* rapetin atas bawah */
+  line-height: 1.1;
 }
 
 /* SECTION COVER TENGAH */
 .cover {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* mulai dari atas */
   align-items: center;
-  gap: 15px;
+  gap: 8px; /* dari 15px jadi 8px biar rapet */
+  padding-top: 20px;
 }
 
 .teks-kecil {
