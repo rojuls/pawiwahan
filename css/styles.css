@@ -25,13 +25,22 @@ body {
 
 /* SECTION COVER TENGAH */
 .cover {
-  min-height: 90vh;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* mulai dari atas */
   align-items: center;
-  gap: 8px;
-  padding-top: 20px;
+  justify-content: center;
+  position: fixed; /* ganti jadi fixed biar nempel */
+  top: 0;
+  left: 0;
+  z-index: 9999; /* paling atas */
+  background: url('img/JAWA-5-BG-UTAMA-1.jpg') no-repeat center center/cover;
+  transition: opacity 1s ease, visibility 1s ease; /* animasi ilang */
+}
+
+.cover.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .teks-kecil {
@@ -280,3 +289,5 @@ body {
   margin-bottom: 15px;
   line-height: 1.4;
 }
+    body.lock-scroll { overflow: hidden; height: 100vh; }
+    .cover.hide { opacity: 0; visibility: hidden; }
