@@ -272,3 +272,11 @@ body {
 .gift-box img {
   margin-bottom: 10px;
 }
+
+.card-kaca .judul {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #8b4513;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
