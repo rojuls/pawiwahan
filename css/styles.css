@@ -92,3 +92,13 @@ h1 {
   margin-bottom: 15px;
   color: #8b4513;
 }
+/* FOTO OVAL PENGANTIN */
+.foto-oval {
+  width: 200px;           /* Atur lebarnya */
+  height: 250px;          /* Atur tingginya */
+  object-fit: cover;      /* Biar ga gepeng */
+  border-radius: 50% / 60%; /* Bikin oval */
+  border: 5px solid #fff;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  margin: 20px 0;
+}
