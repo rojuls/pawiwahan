@@ -109,3 +109,12 @@ h1.nama { /* tambahin .nama biar khusus buat nama doang */
   margin: 20px auto;
   display: block;
 }
+.isi-undangan {
+  padding: 60px 20px;
+  text-align: center;
+}
+.mempelai h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #8b4513;
+}
