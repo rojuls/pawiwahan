@@ -241,8 +241,7 @@ body {
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  z-index: 10000; /* naikkin biar di atas cover */
-  transition: transform 0.3s ease;
+  z-index: 10000; /* naikin biar di atas cover */
 }
 
 .btn-musik:active {
