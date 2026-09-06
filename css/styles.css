@@ -30,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed; /* ganti jadi fixed biar nempel */
+  position: fixed; /* biar nempel nutupin semua */
   top: 0;
   left: 0;
   z-index: 9999; /* paling atas */
@@ -241,7 +241,12 @@ body {
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  z-index: 999;
+  z-index: 10000; /* naikkin biar di atas cover */
+  transition: transform 0.3s ease;
+}
+
+.btn-musik:active {
+  transform: scale(0.9); /* biar ada efek klik */
 }
 
 /* CARD KACA EFEK */
