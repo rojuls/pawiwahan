@@ -116,6 +116,20 @@
 
     </section>
   </div>
+   <!-- penutup section terakhir -->
+
+  </div> <!-- penutup .box-utama -->
+
+  <script>
+    document.querySelector('.btn-buka').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector('.box-utama').classList.add('dibuka'); // 1. Sembunyiin cover
+      document.body.classList.remove('lock-scroll'); // 2. BUKA KUNCI SCROLL - PINDAHIN KE SINI
+      document.querySelector('#isi').scrollIntoView({behavior: 'smooth'}); // 3. Scroll ke isi
+    });
+</script>
+
+
 
 <!-- AUDIO -->
 <audio id="backsound" loop>
